@@ -1,4 +1,4 @@
-### Doit-Vue.js
+### Doit-Vue.js 입문
 ## Step 1 - Vue.js란 무엇인가?
 MVVM 패턴의 ViewModel 레이어에 해당하는 화면단 라이브러리이다.
 

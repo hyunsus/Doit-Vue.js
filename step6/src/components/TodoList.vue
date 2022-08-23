@@ -1,7 +1,7 @@
 <template>
   <section>
     <ul>
-      <li v-for="todoItem in todoItems" class="shadow">
+      <li v-for="(todoItem, index) in todoItems" :key="todoItem" class="shadow">
         <i class="checkBtn fas fa-check" aria-hidden="true"></i>
         {{ todoItem }}
         <span
@@ -29,6 +29,12 @@ export default {
         this.todoItems.push(localStorage.key(i));
       }
     }
+  },
+  methods: {
+    removeTodo(todoItem, index) {
+      localStorage.removeItem(todoItem);
+      this.todoItems.splice(index, 1);
+    },
   },
 };
 </script>

@@ -25,8 +25,18 @@ export default {
       todoItems: [], // List에서 선언했던 데이터를 담을 todoItems 빈 배열로 선언
     };
   },
+  created() {
+    if (localStorage.length > 0) {
+      for (var i = 0; i < localStorage.length; i++) {
+        this.todoItems.push(localStorage.key(i));
+      }
+    }
+  },
   methods: {
-    addTodo(todoItem) {},
+    addTodo(todoItem) {
+      localStorage.setItem(value, value);
+      this.todoItems.push(todoItem);
+    },
   },
 };
 </script>

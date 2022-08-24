@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <TodoHeader></TodoHeader>
-    <TodoInput></TodoInput>
-    <TodoList></TodoList>
+    <TodoInput v-on:addTodo="addTodo"></TodoInput>
+    <TodoList v-bind:propsdata="todoItems"></TodoList>
     <TodoFooter></TodoFooter>
   </div>
 </template>
@@ -19,6 +19,14 @@ export default {
     TodoInput: TodoInput,
     TodoList: TodoList,
     TodoFooter: TodoFooter,
+  },
+  data() {
+    return {
+      todoItems: [], // List에서 선언했던 데이터를 담을 todoItems 빈 배열로 선언
+    };
+  },
+  methods: {
+    addTodo(todoItem) {},
   },
 };
 </script>

@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     addTodo(todoItem) {
-      localStorage.setItem(value, value);
+      localStorage.setItem(todoItem, todoItem);
       this.todoItems.push(todoItem);
     },
     clearAll() {
